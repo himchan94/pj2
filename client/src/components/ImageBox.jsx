@@ -10,11 +10,19 @@ import {
   Link,
 } from "@material-ui/core";
 
+import ImageShow from "./ImageShow.jsx";
+
+import useStyles from "../css/useStyles.js";
+
 const ImageBox = () => {
+  const classes = useStyles();
+
   return (
-    <Grid>
-      <Paper elevation={10}>이미지박스</Paper>
-    </Grid>
+    <div className={classes.page}>
+      <Paper className={classes.imagepage} elevation={10}>
+        <ImageShow />
+      </Paper>
+    </div>
   );
 };
 
