@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebar: {
     flex: 1,
+    backgroundColor: "#BEBEBE",
+    padding: "15px",
+    maxHeight: "100vh",
   },
   page: {
     flex: 4,
@@ -15,6 +18,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+  },
+  imageinput: {
+    display: "none",
+  },
+
+  sideComponnent: {
+    marginTop: "10px",
   },
 }));
 
