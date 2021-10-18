@@ -12,6 +12,7 @@ const SideBar = () => {
       <ImageAdd />
       <Divider />
       <LabelAdd />
+      <h1>test</h1>
     </div>
   );
 };
