@@ -14,13 +14,13 @@ import ImageShow from "./ImageShow.jsx";
 
 import useStyles from "../css/useStyles.js";
 
-const ImageBox = () => {
+const ImageBox = ({ files }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.page}>
       <Paper className={classes.imagepage} elevation={10}>
-        <ImageShow />
+        <ImageShow files={files} />
       </Paper>
     </div>
   );

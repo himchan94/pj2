@@ -5,14 +5,13 @@ import useStyles from "../css/useStyles.js";
 import LabelAdd from "./LabelAdd.jsx";
 import Divider from "@mui/material/Divider";
 
-const SideBar = () => {
+const SideBar = ({ files, setFiles }) => {
   const classes = useStyles();
   return (
     <div className={classes.sidebar}>
-      <ImageAdd />
+      <ImageAdd files={files} setFiles={setFiles} />
       <Divider />
       <LabelAdd />
-      <h1>test3</h1>
     </div>
   );
 };

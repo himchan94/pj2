@@ -39,31 +39,6 @@ const Scroll = ({ files = [], type, label = [] }) => {
         })}
       </List>
     );
-  } else {
-    return (
-      <List
-        sx={{
-          width: "100%",
-          bgcolor: "#D3D3D3",
-          position: "relative",
-          overflow: "auto",
-          maxHeight: 200,
-          marginTop: "15px",
-        }}
-      >
-        {[0, 1, 2, 3, 4].map((sectionId) => (
-          <li key={`section-${sectionId}`}>
-            <ul>
-              {[0, 1, 2].map((item) => (
-                <ListItem key={`item-${sectionId}-${item}`}>
-                  <ListItemText primary={`Item ${item}`} />
-                </ListItem>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </List>
-    );
   }
 };
 

@@ -13,8 +13,7 @@ import Scroll from "./Scroll";
 const Input = styled("input")({
   display: "none",
 });
-const ImageAdd = () => {
-  const [files, setFiles] = useState([]);
+const ImageAdd = ({ files, setFiles }) => {
   const fileInput = useRef();
   const classes = useStyles();
 

@@ -1,19 +1,25 @@
 import { useEffect } from "react";
+import useStyles from "../css/useStyles.js";
 
-const ImageShow = () => {
-  useEffect(() => {
-    const canvas = document.getElementById("canvas");
-    const context = canvas.getContext("2d");
+import CornerstoneViewport from "react-cornerstone-viewport";
 
-    const img = new Image();
-    img.src = "https://thiscatdoesnotexist.com/";
+const ImageShow = ({ files }) => {
+  const classes = useStyles();
 
-    img.onload = function () {
-      context.drawImage(img, 0, 0);
-    };
-  });
+  useEffect(() => {});
 
-  return <canvas id="canvas" width="700px" height="700px"></canvas>;
+  if (files.length === 0) {
+    return <h1>Upload your dicom image</h1>;
+  } else {
+    return (
+      <div className={classes.dicomimg}>
+        <CornerstoneViewport
+          style={{ width: "100%", height: "100%" }}
+          imageIds="none"
+        />
+      </div>
+    );
+  }
 };
 
 export default ImageShow;

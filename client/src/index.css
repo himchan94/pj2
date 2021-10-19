@@ -1,14 +1,21 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
 }
 
-body {
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+}
+
+body {
+  width: 100%;
+  height: 100%;
 }
