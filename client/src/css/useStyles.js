@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: "15px",
   },
   imageinput: {
     display: "none",
@@ -32,7 +31,9 @@ const useStyles = makeStyles((theme) => ({
   dicomimg: {
     width: "100%",
     height: "100%",
-    flexGrow: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
