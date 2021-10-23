@@ -12,7 +12,12 @@ export default function initCornerstone() {
   cornerstoneTools.external.cornerstoneMath = cornerstoneMath;
 
   //
-  cornerstoneTools.init();
+  cornerstoneTools.init({
+    mouseEnabled: true,
+    touchEnabled: true,
+    globalToolSyncEnabled: false,
+    showSVGCursors: false,
+  });
 
   // Preferences
   const fontFamily =

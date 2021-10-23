@@ -8,6 +8,8 @@ import useStyles from "../css/useStyles.js";
 import { ListItemButton } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
+import cornerstoneWADOImageLoader from "cornerstone-wado-image-loader";
+
 import Scroll from "./Scroll";
 
 const Input = styled("input")({
@@ -18,15 +20,12 @@ const ImageAdd = ({ files, setFiles }) => {
   const classes = useStyles();
 
   const selectFile = (e) => {
-    // e.target은 input이죠!
-    // input이 가진 files 객체를 살펴봅시다.
-    console.log(e.target.files);
-    // 선택한 파일이 어떻게 저장되어 있나 봅시다.
-    // console.log(e.target.files[0]);
+    const before_converted = [...e.target.files];
+    const converted = before_converted.map((file) => {
+      return cornerstoneWADOImageLoader.wadouri.fileManager.add(file);
+    });
 
-    // ref로도 확인해봅시다. :)
-    // console.log(fileInput.current.files[0]);
-    setFiles([...files, ...e.target.files]);
+    setFiles([...files, ...converted]);
   };
 
   return (
